@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Basic Canvas</title>
+</head>
+<body>
+	<style>
+		#nombre{
+			background: rgb(34,193,195);
+			background: linear-gradient(212deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+			/*margin-left: 35%;*/
+			/*background-color:green ;*/
+		}
+	</style>
+		<canvas id="nombre" width="500px" height="330" class="canvas"></canvas>
+	<script>
+		var txt = document.getElementById('nombre').getContext('2d');
+		txt.font = "40px sans-serif";
+		txt.fillStyle = "white";
+		txt.fillText("Carlos Restrepo", 40, 300);
+			
+			var img = new Image();
+			img.src = "Imagenes/user.png";
+			txt.drawImage(img, 0, 0);
+
+			img.onload = function(){
+				txt.drawImage(img,0,10);
+			}
+
+
+	</script>
+</body>
+</html>

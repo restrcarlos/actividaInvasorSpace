@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Fundamentos 02</title>
+    <script language="javascript" type="text/javascript">
+      //alert('Hola Mundo');
+    </script>
+  </head>
+  <body>
+    <b>
+      <script language="javascript" type="text/javascript">
+        var linebreak = '<br />';
+        var datoA = 10;
+        var datoB = 20;
+        var datoC = 5;
+        var resultado = 'Sin datos';
+        debugger;
+
+        //*** Condición IF
+        if (datoA > datoB) {
+          resultado = 'La condición se cumplió';
+        }
+        document.write('El resultado de la evaluación if es: ', resultado);
+        document.write(linebreak);
+
+        //*** Condición IF-ELSE
+        if (datoA > datoB) {
+          resultado = 'La condición se cumplió';
+        } else {
+          resultado = 'La condición no se cumplió';
+        }
+        document.write('El resultado de la evaluación if-else es: ', resultado);
+        document.write(linebreak);
+
+        //*** Condición IF-ELSE-IF
+        if (datoA > datoB) {
+          resultado = 'La primer condición se cumplió';
+        } else if (datoB == datoA) {
+          resultado = 'La segunda condición se cumplió';
+        } else if (datoB == datoA) {
+          resultado = 'La tercera condición se cumplió';
+        } else if (datoB >= datoA) {
+          resultado = 'La cuarta condición se cumplió';
+        } else if (datoB <= datoA) {
+          resultado = 'La quinta condición se cumplió';
+        } else if (datoB != datoA) {
+          resultado = 'La sexta condición se cumplió';
+        } else {
+          resultado = 'No se cumplieron las condiciones';
+        }
+        document.write(
+          'El resultado de la evaluación if-else-if es: ',
+          resultado
+        );
+        document.write(linebreak);
+
+        //*** Condiciones anidadas
+        if (datoA < datoB) {
+          resultado = 'La condición se cumplió';
+          if (datoC < datoB) {
+            if (datoC < datoB) {
+              resultado = 'Evaluación anidada verdadera';
+            } else {
+              resultado = 'No se cumplió la evaluación anidada';
+            }
+          } else {
+            resultado = 'No se cumplió la evaluación anidada';
+          }
+        } else {
+          resultado = 'No se cumplió la evaluación';
+        }
+        document.write('El resultado de la evaluación anidada es: ', resultado);
+        document.write(linebreak);
+
+        //*** Estructura SWITCH
+        // Evaluación con números
+        var edad = 40;
+        var resultado = '';
+
+        switch (edad) {
+          case 10:
+            resultado = 'La edad es 10 años';
+            break;
+          case 20:
+            resultado = 'La edad es 20 años';
+            break;
+          case 30:
+            resultado = 'La edad es 30 años';
+            break;
+          case 40:
+            resultado = 'La edad es 40 años';
+            break;
+          default:
+            resultado = 'Ningún caso coincide';
+            break;
+        }
+        document.write(
+          'El resultado de la evaluación SWITCH con números es: ',
+          resultado
+        );
+        document.write(linebreak);
+
+        // Evaluación con texto
+        var producto = 'Radio';
+
+        switch (producto) {
+          case 'TV':
+            resultado = 'Se eligió la TV';
+            break;
+          case 'Radio':
+            resultado = 'Se eligió el Radio ';
+            break;
+          case 'Teléfono':
+            resultado = 'Se eligió el teléfono ';
+            break;
+          default:
+            resultado = 'No se eligió ningún producto';
+            break;
+        }
+        document.write(
+          'El resultado de la evaluación SWITCH con texto es: ',
+          resultado
+        );
+        document.write(linebreak);
+
+        var productos = 5;
+        //*** Ciclo FOR | Ciclo Definido, COMPONENTES: Contador, Condición o evaluación, Paso | incrementador o decrementador
+        for (let contador = 0; contador < productos; contador++) {
+          document.write('Producto #' + contador);
+          document.write(linebreak);
+        }
+        //*** Ciclo WHILE | Ciclo Indefinido, Iteración indeterminada o desconocida
+        while (productos > 0) {
+          document.write('Producto vendido');
+          document.write(linebreak);
+          productos--;
+        }
+        //*** Ciclo DO..WHILE | Ciclo Indefinido. se hace almenos una iteracion
+        do {
+          document.write('Producto comprado');
+          document.write(linebreak);
+          productos--;
+        } while (productos >= 1);
+        //*** Control de ciclos, break | continue
+        var contador = 0;
+        var cuenta = 0;
+
+        for (contador = 0; contador <= 20; contador++) {
+          if (contador == 5) {
+            break;
+          }
+          if (contador % 2 == 0) {
+            continue;
+          }
+          cuenta++;
+          //debugger;
+          document.write('Hay ' + cuenta + ' números impares');
+          document.write(linebreak);
+        }
+      </script>
+    </b>
+    <br />
+  </body>
+</html>

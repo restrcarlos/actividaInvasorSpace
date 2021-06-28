@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Fundamentos 02</title>
+    <script language="javascript" type="text/javascript">
+      //alert('Hola Mundo');
+    </script>
+  </head>
+  <body>
+    <b>
+      <script language="javascript" type="text/javascript">
+        var linebreak = '<br />';
+
+        //*** Definiendo arreglos
+        var departamentos = ['Tunja', 'Pasto', 'Valle'];
+        var ciudades = new Array('Bogota', 'Manizalez', 'Ibague', 'Neiva');
+        document.write(Array.isArray(departamentos), ciudades);
+        document.write(linebreak);
+        document.write('Hay ' + ciudades.length + ' ciudades en el Arreglo');
+        document.write(linebreak);
+
+        document.write(departamentos[0] + departamentos[1]);
+        document.write(linebreak);
+
+        //*** Medir y acceder a un arreglo
+        var ciudad = ciudades[ciudades.length - 2];
+        document.write('La ciudad seleccionada es: ', ciudad);
+        document.write(linebreak);
+
+        //*** Arreglos multidimensionales | Arreglo de arreglos
+        var region = [departamentos, ciudades];
+        document.write(region[0][1]);
+        document.write(linebreak);
+
+        //*** Operaciones básicas en un arreglo
+        document.write('Salida: ', departamentos);
+        document.write(linebreak);
+        departamentos.push('Meta');
+        departamentos.push('Cucuta');
+        document.write('Salida: ', departamentos);
+        document.write(linebreak);
+        departamentos.pop();
+        departamentos.pop();
+        departamentos.pop();
+        document.write('Salida: ', departamentos);
+        document.write(linebreak);
+        var mostrar = ciudades.join();
+        document.write('Salida: ', mostrar);
+        document.write(linebreak);
+
+        //*** Generación de un arreglo
+        var capitales = 'Cartagena, SantaMarta, Barranquilla';
+        document.write('Salida: ', capitales);
+        document.write(linebreak);
+        var costeras = capitales.split(', ');
+        document.write('Salida: ', costeras[1]);
+        document.write(linebreak);
+        var llanos = Array.of('Yopal', 'Arauca', 'PtoInirida');
+        document.write('Salida: ', llanos);
+        document.write(linebreak);
+        document.write('Salida: ', llanos[2]);
+        document.write(linebreak);
+
+        //*** Ordenando un arreglo
+        document.write('Antes: ', costeras);
+        document.write(linebreak);
+        costeras.sort();
+        document.write('Ordenado: ', costeras);
+        document.write(linebreak);
+        costeras.reverse();
+        document.write('Reversado: ', costeras);
+        document.write(linebreak);
+
+        //*** Desestructuración de arreglos
+        var amazonia = ['Leticia', 'Mocoa', 'Florencia', 'Mitu'];
+        var [amazonia1, amazonia2, amazonia3, amazonia4] = amazonia;
+        document.write(amazonia1, amazonia2, amazonia3, amazonia4);
+        document.write(linebreak);
+
+        //*** Iterando arreglos con for...in
+        for (let i in capitales) {
+          document.write(capitales[i]);
+        }
+        document.write(linebreak);
+
+        //*** Iterando arreglos con forEach
+        llanos.forEach((llanos) => document.write(llanos));
+        document.write(linebreak);
+        llanos.forEach((llanos, index) => document.write(index, llanos));
+        document.write(linebreak);
+
+        //*** Buscando en un arreglo
+        var otrasCapitales = ['Monteria', 'Bucaramanga', 'Medellin'];
+        var ocElegida = otrasCapitales.find(
+          (otrasCapitales) => otrasCapitales == 'Cucuta'
+        );
+        document.write(ocElegida);
+      </script>
+    </b>
+    <br />
+  </body>
+</html>
